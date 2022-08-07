@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/services.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:salahkar/constants/Text_styles.dart';
 import 'package:salahkar/screens/profile_setup/About.dart';
 import 'package:salahkar/screens/profile_setup/Address.dart';
 import 'package:salahkar/screens/profile_setup/AdharUpload.dart';
@@ -59,11 +60,11 @@ class _MprofileSetupState extends State<MprofileSetup> {
   void validation(){
     if (nameController.text.isEmpty) {
       Fluttertoast.showToast(
-          msg: "This is Center Short Toast",
+          msg: "This field cant be empty",
           toastLength: Toast.LENGTH_SHORT,
           gravity: ToastGravity.CENTER,
           //timeInSecForIosWeb: 1,
-          backgroundColor: Colors.red,
+          backgroundColor: Colors.black,
           textColor: Colors.white,
           fontSize: 16.0
       );
@@ -148,26 +149,12 @@ class _MprofileSetupState extends State<MprofileSetup> {
                                 alignment: Alignment.topLeft,
                                 child: Text(
                                   'What we call you ?', textAlign: TextAlign.left,
-                                  style: TextStyle(
-                                      color: Color.fromRGBO(7, 82, 100, 1),
-                                      fontFamily: 'Poppins',
-                                      fontSize: 26,
-                                      letterSpacing: 0 /*percentages not used in flutter. defaulting to zero*/,
-                                      fontWeight: FontWeight.bold,
-                                      height: 1.5909090909090908
-                                  ),))
+                                  style: Heading1,))
                         ),
                         Container(
                           child: Text(
                             'Let’s first setup your profile, so tell us how would you like us to call you?',
-                            textAlign: TextAlign.left, style: TextStyle(
-                              color: Color.fromRGBO(145, 145, 145, 1),
-                              fontFamily: 'Poppins',
-                              fontSize: 18,
-                              letterSpacing: 0 /*percentages not used in flutter. defaulting to zero*/,
-                              fontWeight: FontWeight.normal,
-                              height: 1.7857142857142858
-                          ),),
+                            textAlign: TextAlign.left, style: NormalText1,),
                         ),
                         SizedBox(height: 30,),
                         TextField(

@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:salahkar/models/mentor_model.dart';
 import 'package:salahkar/screens/Setting_page.dart';
+import 'package:salahkar/screens/VedioMeetform.dart';
 
 import '../../constants/constant_color.dart';
 
@@ -195,7 +196,11 @@ class _MentorDescriptionState extends State<MentorDescription> {
                                                                                     children: [
                                                                                       Column(
                                                                                     children:[
-                                                                                      Container(
+                                                                                      InkWell(
+                                                                                        onTap:(){
+                                                                                          Navigator.push(context, MaterialPageRoute(builder: (_)=>VedioFormMeet(),));
+                                                                                },
+                                                                                        child:Container(
                                                                                         height:66,
                                                                                         width: 66,
                                                                                         child:Icon(Icons.video_call_rounded,color: darkBlue,),
@@ -204,6 +209,7 @@ class _MentorDescriptionState extends State<MentorDescription> {
                                                                                             borderRadius: BorderRadius.circular(10)
 
                                                                                         ),
+                                                                                      ),
                                                                                       ),
                                                                                       Text('Vedio Meet')
                                                                                       ]

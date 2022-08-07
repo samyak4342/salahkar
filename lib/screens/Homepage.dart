@@ -1,9 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:salahkar/Explore/Mentor_list.dart';
 import 'package:salahkar/learner/Mentor_listtile.dart';
 import 'package:salahkar/screens/Mlogin_page.dart';
 import 'package:salahkar/screens/Search_page.dart';
 import 'package:salahkar/screens/intro_screen.dart';
+import 'package:google_fonts/google_fonts.dart';
+
 
 import '../constants/constant_color.dart';
 
@@ -73,19 +76,17 @@ class _HomePageState extends State<HomePage> {
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text('Hello,',textAlign: TextAlign.left, style: TextStyle(
+                              Text('Hello,',textAlign: TextAlign.left, style: GoogleFonts.poppins(
                                   color: white,
-                                  fontFamily: 'Poppins',
                                   fontSize: 18,
                                   letterSpacing: 0 /*percentages not used in flutter. defaulting to zero*/,
-                                  fontWeight: FontWeight.bold,
+                                  fontWeight: FontWeight.normal,
                                   height: 1
                               ),),
                               SizedBox(height: 15,),
                               Expanded(
-                              child:Text('John Snow 👋',textAlign: TextAlign.left, style: TextStyle(
+                              child:Text('John Snow 👋',textAlign: TextAlign.left, style: GoogleFonts.poppins(
                                   color: white,
-                                  fontFamily: 'Poppins',
                                   fontSize: 22,
                                   letterSpacing: 0 /*percentages not used in flutter. defaulting to zero*/,
                                   fontWeight: FontWeight.bold,
@@ -154,9 +155,8 @@ class _HomePageState extends State<HomePage> {
                                                                   children: [
                                                                     Flexible(
                                                                       flex:2,
-                                                                      child:Text('Find Salahkar’s', textAlign: TextAlign.left, style: TextStyle(
+                                                                      child:Text('Find Salahkar’s', textAlign: TextAlign.left, style: GoogleFonts.poppins(
                                                                           color: Color.fromRGBO(16, 23, 41, 1),
-                                                                          fontFamily: 'Poppins',
                                                                           fontSize: 18,
                                                                           letterSpacing: 0 /*percentages not used in flutter. defaulting to zero*/,
                                                                           fontWeight: FontWeight.bold,
@@ -167,9 +167,8 @@ class _HomePageState extends State<HomePage> {
                                                                       child:Container(
                                                                           padding: EdgeInsets.fromLTRB(0, 8, 0, 0),
                                                                           width: 200,
-                                                                          child:Text('Find best Mentors of financial world around India and learn tricks of finance from them at a very low cost. ', textAlign: TextAlign.left, style: TextStyle(
+                                                                          child:Text('Find best Mentors of financial world around India and learn tricks of finance from them at a very low cost. ', textAlign: TextAlign.left, style: GoogleFonts.poppins(
                                                                               color: Color.fromRGBO(160, 160, 160, 1),
-                                                                              fontFamily: 'Poppins',
                                                                               fontSize: 12,
                                                                               letterSpacing: 0 /*percentages not used in flutter. defaulting to zero*/,
                                                                               fontWeight: FontWeight.w500,
@@ -209,9 +208,8 @@ class _HomePageState extends State<HomePage> {
                                                                 children: [
                                                                   Flexible(
                                                                     flex:2,
-                                                                    child:Text('Become a Salahkar', textAlign: TextAlign.left, style: TextStyle(
+                                                                    child:Text('Become a Salahkar', textAlign: TextAlign.left, style: GoogleFonts.poppins(
                                                                         color: Color.fromRGBO(16, 23, 41, 1),
-                                                                        fontFamily: 'Poppins',
                                                                         fontSize: 18,
                                                                         letterSpacing: 0 /*percentages not used in flutter. defaulting to zero*/,
                                                                         fontWeight: FontWeight.bold,
@@ -222,9 +220,8 @@ class _HomePageState extends State<HomePage> {
                                                                     child:Container(
                                                                         padding: EdgeInsets.fromLTRB(0, 8, 0, 0),
                                                                         width: 200,
-                                                                        child:Text('If you know the art of Financial world than Salahkar is the best platform for you, use your art and starig earning from it.', textAlign: TextAlign.left, style: TextStyle(
+                                                                        child:Text('If you know the art of Financial world than Salahkar is the best platform for you, use your art and starig earning from it.', textAlign: TextAlign.left, style: GoogleFonts.poppins(
                                                                             color: Color.fromRGBO(160, 160, 160, 1),
-                                                                            fontFamily: 'Poppins',
                                                                             fontSize: 12,
                                                                             letterSpacing: 0 /*percentages not used in flutter. defaulting to zero*/,
                                                                             fontWeight: FontWeight.w500,
@@ -277,9 +274,8 @@ class _HomePageState extends State<HomePage> {
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text('Explore ✈',textAlign: TextAlign.left, style: TextStyle(
+                    Text('Explore ✈',textAlign: TextAlign.left, style: GoogleFonts.poppins(
                         color: Color.fromRGBO(16, 23, 41, 1),
-                        fontFamily: 'Poppins',
                         fontSize: 22,
                         letterSpacing: 0 /*percentages not used in flutter. defaulting to zero*/,
                         fontWeight: FontWeight.w500,
@@ -288,9 +284,8 @@ class _HomePageState extends State<HomePage> {
                     Expanded(
                       child:Align(
                         alignment: Alignment.topRight,
-                          child:Text('Swipe',textAlign: TextAlign.left, style: TextStyle(
+                          child:Text('Swipe',textAlign: TextAlign.left, style: GoogleFonts.poppins(
                         color: Color.fromRGBO(7, 82, 100, 1),
-                        fontFamily: 'Poppins',
                         fontSize: 18,
                         letterSpacing: 0 /*percentages not used in flutter. defaulting to zero*/,
                         fontWeight: FontWeight.bold,
@@ -317,7 +312,9 @@ class _HomePageState extends State<HomePage> {
                         title: 'Calculators',
                         description: 'All types of Financial Calculators to made your Finance easy.',
                         image: 'assets/exp2.png',
-                        onTap: (){}
+                        onTap: (){
+                          Navigator.push(context, MaterialPageRoute(builder: (_)=>MentorList(),));
+                        }
                     ),
                     ExploreSection(
                         title: 'Calculators',
@@ -353,17 +350,15 @@ class _HomePageState extends State<HomePage> {
           Padding(
             padding: EdgeInsets.fromLTRB(10, 5, 10, 5),
             child:ListTile(
-              title:Text('Top Mentors ', textAlign: TextAlign.left, style: TextStyle(
+              title:Text('Top Mentors ', textAlign: TextAlign.left, style: GoogleFonts.poppins(
                   color: Color.fromRGBO(16, 23, 41, 1),
-                  fontFamily: 'Poppins',
                   fontSize: 20,
                   letterSpacing: 0 /*percentages not used in flutter. defaulting to zero*/,
                   fontWeight: FontWeight.bold,
                   height: 1.5 /*PERCENT not supported*/
               ),),
-              subtitle:Text('Recommded by Salahkar', textAlign: TextAlign.left, style: TextStyle(
+              subtitle:Text('Recommded by Salahkar', textAlign: TextAlign.left, style: GoogleFonts.poppins(
                   color: Color.fromRGBO(16, 23, 41, 1),
-                  fontFamily: 'Poppins',
                   fontSize: 13,
                   letterSpacing: 0 /*percentages not used in flutter. defaulting to zero*/,
                   fontWeight: FontWeight.normal,
@@ -400,15 +395,14 @@ class _HomePageState extends State<HomePage> {
                     flex:3,
                    child:Padding(
                     padding:EdgeInsets.all(20),
-                  child:Column(
+                    child:Column(
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Flexible(
                         flex:1,
-                        child:Text('Refer and Earn', textAlign: TextAlign.left, style: TextStyle(
+                        child:Text('Refer and Earn', textAlign: TextAlign.left, style: GoogleFonts.poppins(
                           color: Color.fromRGBO(7, 82, 100, 1),
-                          fontFamily: 'Poppins',
                           fontSize: 24,
                           letterSpacing: 0 /*percentages not used in flutter. defaulting to zero*/,
                           fontWeight: FontWeight.bold,
@@ -419,9 +413,8 @@ class _HomePageState extends State<HomePage> {
                         child:Container(
                         padding: EdgeInsets.fromLTRB(0, 10, 0, 0),
                         width: 200,
-                        child:Text('Refer about salahkar to your friends and family and earn Rs. 100 on every sign up from your given link. ', textAlign: TextAlign.left, style: TextStyle(
+                        child:Text('Refer about salahkar to your friends and family and earn Rs. 100 on every sign up from your given link. ', textAlign: TextAlign.left, style: GoogleFonts.poppins(
                           color: Color.fromRGBO(136, 136, 136, 1),
-                          fontFamily: 'Poppins',
                           fontSize: 13,
                           letterSpacing: 0 /*percentages not used in flutter. defaulting to zero*/,
                           fontWeight: FontWeight.bold,
@@ -522,9 +515,8 @@ class ExploreSection extends StatelessWidget {
                       padding: EdgeInsets.fromLTRB(10, 5, 10, 0),
                       child:Align(
                         alignment: Alignment.topLeft,
-                        child:Text(this.title, textAlign: TextAlign.left, style: TextStyle(
+                        child:Text(this.title, textAlign: TextAlign.left, style: GoogleFonts.poppins(
                             color: Color.fromRGBO(0, 78, 100, 1),
-                            fontFamily: 'Poppins',
                             fontSize: 20,
                             letterSpacing: 0 /*percentages not used in flutter. defaulting to zero*/,
                             fontWeight: FontWeight.w600,
@@ -534,12 +526,11 @@ class ExploreSection extends StatelessWidget {
                       flex: 3,
                       child:Container(
                         padding: EdgeInsets.all(10),
-                        child: Text(this.description, textAlign: TextAlign.left, style: TextStyle(
+                        child: Text(this.description, textAlign: TextAlign.left, style: GoogleFonts.poppins(
                             color: Color.fromRGBO(160, 160, 160, 1),
-                            fontFamily: 'Poppins',
                             fontSize: 16,
                             letterSpacing: 0 /*percentages not used in flutter. defaulting to zero*/,
-                            fontWeight: FontWeight.bold,
+                            fontWeight: FontWeight.normal,
                             height: 1.5 /*PERCENT not supported*/
                         ),)
                     ),

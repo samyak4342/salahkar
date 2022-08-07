@@ -421,7 +421,9 @@ class _MeetChargesState extends State<MeetCharges> {
                       child:Align(
                         alignment: Alignment.bottomCenter,
                         child:Button1(
-                          onTap:(){},
+                          onTap:(){
+                            Navigator.push(context, MaterialPageRoute(builder: (_)=>HomeScreen(),));
+                          },
                           text:'Next',
                         )
                       )

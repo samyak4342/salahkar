@@ -9,7 +9,8 @@ import 'package:salahkar/screens/profile_setup/Mprofile_setup.dart';
 import 'package:salahkar/screens/test.dart';
 
 void main() {
-  runApp( MyApp());
+  runApp(
+       MyApp(),);
 }
 
 class MyApp extends StatelessWidget {
@@ -17,9 +18,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Salahkar',
       debugShowCheckedModeBanner: false,
-      home: HomeScreen(),
+      home: OnboardingScreen(),
     );
   }
 }
@@ -45,22 +46,22 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body:Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children:<Widget>[
-          Align(
-            alignment: Alignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children:<Widget>[
+            Align(
+              alignment: Alignment.center,
 
-      child:Container(
-      alignment: Alignment.center,
-      child:Image.asset('assets/logo.png'),
-      ),
-    ),
-      SizedBox(height:100,),
-        Text("Made In India",textAlign: TextAlign.end,)
+              child:Container(
+                alignment: Alignment.center,
+                child:Image.asset('assets/logo.png'),
+              ),
+            ),
+            SizedBox(height:100,),
+            Text("Made In India",textAlign: TextAlign.end,)
 
 
-      ])
+          ])
 
     );
   }

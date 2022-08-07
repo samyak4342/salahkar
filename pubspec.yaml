@@ -48,6 +48,7 @@ dev_dependencies:
   fluttertoast: ^8.0.9
   google_fonts:
 
+
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 

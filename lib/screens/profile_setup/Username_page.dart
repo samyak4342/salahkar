@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:salahkar/constants/Text_styles.dart';
 
 import '../../constants/constant_color.dart';
 import 'package:salahkar/screens/profile_setup/Mprofile_setup.dart';
@@ -58,26 +59,12 @@ class _UsernameState extends State<Username> {
                       alignment: Alignment.topLeft,
                       child: Text(
                         'What we call you ?', textAlign: TextAlign.left,
-                        style: TextStyle(
-                            color: Color.fromRGBO(7, 82, 100, 1),
-                            fontFamily: 'Poppins',
-                            fontSize: 26,
-                            letterSpacing: 0 /*percentages not used in flutter. defaulting to zero*/,
-                            fontWeight: FontWeight.bold,
-                            height: 1.5909090909090908
-                        ),))
+                        style:Heading1,))
               ),
               Container(
                 child: Text(
                   'Let’s first setup your profile, so tell us how would you like us to call you?',
-                  textAlign: TextAlign.left, style: TextStyle(
-                    color: Color.fromRGBO(145, 145, 145, 1),
-                    fontFamily: 'Poppins',
-                    fontSize: 18,
-                    letterSpacing: 0 /*percentages not used in flutter. defaulting to zero*/,
-                    fontWeight: FontWeight.normal,
-                    height: 1.7857142857142858
-                ),),
+                  textAlign: TextAlign.left, style: NormalText1,),
               ),
               SizedBox(height: 30,),
               TextFormField(

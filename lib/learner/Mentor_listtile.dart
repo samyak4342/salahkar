@@ -35,7 +35,7 @@ class MentorListTile extends StatefulWidget {
         ),),
         subtitle: Text(mentor.exprtise,textAlign: TextAlign.left, style:
         GoogleFonts.poppins(
-            color: Color.fromRGBO(16, 23, 41, 1),
+            color: Color.fromRGBO(160, 160, 160, 1),
             fontSize: 12,
             letterSpacing: 0 /*percentages not used in flutter. defaulting to zero*/,
             fontWeight: FontWeight.normal,

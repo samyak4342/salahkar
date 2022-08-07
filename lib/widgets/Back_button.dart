@@ -9,13 +9,14 @@ class BackButton  extends StatefulWidget {
 }
 
 class _BackButtonState extends State<BackButton> {
+  bool isWhite = true;
   @override
   Widget build(BuildContext context) {
     return IconButton(
       onPressed: (){
         Navigator.pop(context);
       },
-      icon: Icon(Icons.arrow_back_ios,color: white,),
+      icon: Icon(Icons.arrow_back_ios,color: isWhite ? Colors.white : Colors.black,),
     );
   }
 }
