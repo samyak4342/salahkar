@@ -3,6 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:salahkar/learner/login_learner.dart';
 import 'package:salahkar/screens/signup_mentor.dart';
 
+import '../constants/Text_styles.dart';
+import '../learner/signup_learner.dart';
+
 class IntroScreen extends StatefulWidget {
   @override
   _IntroScreenState createState() => _IntroScreenState();
@@ -20,7 +23,15 @@ class _IntroScreenState extends State<IntroScreen> {
         child:Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
-
+            Align(
+              alignment: Alignment.topLeft,
+              child:IconButton(
+                onPressed: (){
+                  Navigator.pop(context);
+                },
+                icon: Icon(Icons.arrow_back_ios,color:Colors.black),
+              ),
+            ),
             Flexible(
               flex: 3,
              fit: FlexFit.tight,
@@ -29,7 +40,7 @@ class _IntroScreenState extends State<IntroScreen> {
                 height:430,
                 decoration: BoxDecoration(
                   image : DecorationImage(
-                      image: AssetImage('assets/intro1.jpg'),
+                      image: AssetImage('assets/into_screen.png'),
                       fit: BoxFit.fill
                   ),
                 )
@@ -39,28 +50,15 @@ class _IntroScreenState extends State<IntroScreen> {
               flex: 1,
               fit: FlexFit.tight,
                 child:Container(
-                child:Text('How would you like to join Salahkar ?', textAlign: TextAlign.left, style: TextStyle(
-                    color: Color.fromRGBO(7, 82, 100, 1),
-                    fontFamily: 'Poppins',
-                    fontSize: 26,
-                    letterSpacing: 0 /*percentages not used in flutter. defaulting to zero*/,
-                    fontWeight: FontWeight.bold,
-                    height: 1.5909090909090908
-                ),)
+                child:Text('How would you like to join Salahkar ?', textAlign: TextAlign.left, style: Heading1,)
             ),
             ),
             Flexible(
               flex: 1,
               fit: FlexFit.tight,
                 child:Container(
-              child: Text('Join us in the journey of making everyone financally free and help them in achieving their goals.', textAlign: TextAlign.left, style: TextStyle(
-                  color: Color.fromRGBO(145, 145, 145, 1),
-                  fontFamily: 'Poppins',
-                  fontSize: 18,
-                  letterSpacing: 0 /*percentages not used in flutter. defaulting to zero*/,
-                  fontWeight: FontWeight.normal,
-                  height: 1.7857142857142858
-              ),),
+              child: Text('Join us in the journey of making everyone financally free and help them in achieving their goals.', textAlign: TextAlign.left,
+                style: NormalText1,),
             ),),
             SizedBox(height: 30.0,),
             Row(
@@ -75,7 +73,7 @@ class _IntroScreenState extends State<IntroScreen> {
                     child:Container(
                       width: 145,
                       height: 50,
-                      child: Center(child:Text('Teacher 👨', textAlign:TextAlign.center,style: TextStyle(fontWeight: FontWeight.bold),),),
+                      child: Center(child:Text('Mentor 👨', textAlign:TextAlign.center,style: TextStyle(fontWeight: FontWeight.bold),),),
                       decoration: BoxDecoration(
                           color: Colors.white,
                           border:Border.all(color: Color.fromRGBO(7, 82, 100, 1)),
@@ -88,7 +86,7 @@ class _IntroScreenState extends State<IntroScreen> {
                   flex:1,
                   child: InkWell(
                     onTap: (){
-                      Navigator.push(context, MaterialPageRoute(builder: (_)=>LearnerLoginPage(),));
+                      Navigator.push(context, MaterialPageRoute(builder: (_)=>LearnerSignupPage(),));
                     },
                     child:Container(
                       width: 145,

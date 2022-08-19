@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:salahkar/constants/Text_styles.dart';
 import 'package:salahkar/screens/intro_screen.dart';
 
 import '../constants/constant_color.dart';
@@ -55,7 +56,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                   flex: 7,
                  fit: FlexFit.tight,
                  child:Container(
-                  height: 600.0,
+                  height: 650.0,
                   child: PageView(
                     physics: ClampingScrollPhysics(),
                     controller: _pageController,
@@ -78,7 +79,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                                 height:363,
                                 decoration: BoxDecoration(
                                   image : DecorationImage(
-                                      image: AssetImage('assets/onboard1.jpg'),
+                                      image: AssetImage('assets/onboarding1.png'),
                                       fit: BoxFit.fill
                                   ),
                                 )
@@ -92,17 +93,17 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                               //margin: EdgeInsets.fromLTRB(20.0,0,20.0,0,),
                               child:Text(
                                 'Connect with Teachers and learn about Finance.',
-                                style: kTitleStyle,
+                                style: Heading1,
                               ),
                             ),
                             ),
                             SizedBox(height: 15.0),
                             Flexible(
-                              flex: 1,
+                              flex: 2,
                               // margin: EdgeInsets.fromLTRB(20.0,0,20.0,0,),
                               child: Text(
                                 'Connect with top mentors around the world and start your financial journey and achieve financial freedom..',
-                                style: kSubtitleStyle,
+                                style: NormalText1,
                               ),
                             )
                           ],
@@ -121,7 +122,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                                     height:363,
                                     decoration: BoxDecoration(
                                       image : DecorationImage(
-                                          image: AssetImage('assets/onboard1.jpg'),
+                                          image: AssetImage('assets/onboarding2.png'),
                                           fit: BoxFit.fill
                                       ),
                                     )
@@ -135,17 +136,17 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                                 //margin: EdgeInsets.fromLTRB(20.0,0,20.0,0,),
                                 child:Text(
                                   'Connect with Teachers and learn about Finance.',
-                                  style: kTitleStyle,
+                                  style: Heading1,
                                 ),
                               ),
                             ),
                             SizedBox(height: 15.0),
                             Flexible(
-                              flex: 1,
+                              flex: 2,
                               // margin: EdgeInsets.fromLTRB(20.0,0,20.0,0,),
                               child: Text(
                                 'Connect with top mentors around the world and start your financial journey and achieve financial freedom..',
-                                style: kSubtitleStyle,
+                                style: NormalText1,
                               ),
                             )
                           ],
@@ -164,7 +165,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                      flex:1,
 
                         child:Padding(
-                          padding: EdgeInsets.all(20),
+                          padding: EdgeInsets.all(10),
                           child:Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
@@ -250,16 +251,4 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
 }
 
 
-final kTitleStyle = TextStyle(
-  color: Color(0xff075264),
-  fontWeight: FontWeight.bold,
-  fontFamily: 'Popins',
-  fontSize: 26.0,
-  height: 1.2,
-);
 
-final kSubtitleStyle = TextStyle(
-  color: Color(0xffc4c4c4),
-  fontSize: 14.0,
-  height: 1.7,
-);

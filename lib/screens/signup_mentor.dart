@@ -27,8 +27,14 @@ class _MsignUpState extends State<MsignUp> {
                 children: [
                   Align(
                     alignment: Alignment.topLeft,
-                    child:BackButton(),
+                    child:IconButton(
+                      onPressed: (){
+                        Navigator.pop(context);
+                      },
+                      icon: Icon(Icons.arrow_back_ios,color:Colors.black),
+                    ),
                   ),
+                  SizedBox(height: 30.0,),
                  Container(
                       width: 400,
                       height:MediaQuery.of(context).size.height * 0.4,

@@ -11,7 +11,6 @@ class Username extends StatefulWidget {
 
 class _UsernameState extends State<Username> {
   TextEditingController nameController = TextEditingController();
-  PageController _pageController=PageController();
   bool _validate = false;
 
   @override
@@ -95,7 +94,7 @@ class _UsernameState extends State<Username> {
                         alignment: Alignment.bottomCenter,
                         child: InkWell(
                           onTap: () {
-                            setState(() {
+                            /*setState(() {
                               nameController.text.isEmpty ? _validate = true : _validate = false;
                             });
                             if(_validate == false){
@@ -103,7 +102,7 @@ class _UsernameState extends State<Username> {
                                 duration: Duration(milliseconds: 500),
                                 curve: Curves.ease,
                               );
-                            }
+                            }*/
                           },
                           child: Container(
                             alignment: Alignment.center,

@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:salahkar/learner/signup_learner.dart';
 import 'package:salahkar/screens/Homescreen.dart';
 import 'package:salahkar/screens/profile_setup/Mprofile_setup.dart';
 
@@ -40,13 +41,17 @@ class _LemailLoginState extends State<LemailLogin> {
                     children: <Widget>[
                       Column(
                         children: [
-                      Align(
-                        alignment: Alignment.topLeft,
-                        child:Icon(Icons.arrow_back_ios_rounded),
-                      ),
+                          Align(
+                            alignment: Alignment.topLeft,
+                            child:IconButton(
+                              onPressed: (){
+                                Navigator.pop(context);
+                              },
+                              icon: Icon(Icons.arrow_back_ios,color:Colors.black),
+                            ),
+                          ),
                       SizedBox(height: 30.0,),
-
-                      Container(
+                          Container(
                           child:Align(
                               alignment: Alignment.topLeft,
                               child:Text('Welcome  💛', textAlign: TextAlign.left, style: TextStyle(
@@ -174,7 +179,9 @@ class _LemailLoginState extends State<LemailLogin> {
                       Column(
                         children: [
                       Button1(
-                        onTap: (){},
+                        onTap: (){
+                          Navigator.push(context, MaterialPageRoute(builder: (_)=>HomeScreen(),));
+                        },
                         text: 'Login',
                       ),
                       SizedBox(height: 10.0,),
@@ -192,7 +199,7 @@ class _LemailLoginState extends State<LemailLogin> {
                                 ),),
                                 TextButton(
                                     onPressed: (){
-                                      Navigator.push(context, MaterialPageRoute(builder: (_)=>HomeScreen(),));
+                                      Navigator.push(context, MaterialPageRoute(builder: (_)=>LearnerSignupPage(),));
                                     },
                                     child: Text('Create Now',textAlign: TextAlign.center, style: TextStyle(
                                         color: lightBlue,

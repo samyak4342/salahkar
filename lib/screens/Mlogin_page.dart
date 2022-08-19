@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:salahkar/constants/Text_styles.dart';
 import 'package:salahkar/screens/Homescreen.dart';
 import 'package:salahkar/screens/profile_setup/Mprofile_setup.dart';
+import 'package:salahkar/screens/signup_mentor.dart';
 import 'package:salahkar/widgets/Button1.dart';
 
 import '../constants/constant_color.dart';
@@ -164,7 +165,9 @@ class _MloginPageState extends State<MloginPage> {
                       Column(
                         children: [
                           Button1(
-                            onTap: (){},
+                            onTap: (){
+                              Navigator.push(context, MaterialPageRoute(builder: (_)=>HomeScreen(),));
+                            },
                             text: 'Login',
                           ),
                           SizedBox(height: 10.0,),
@@ -182,7 +185,7 @@ class _MloginPageState extends State<MloginPage> {
                                     ),),
                                     TextButton(
                                         onPressed: (){
-                                          Navigator.push(context, MaterialPageRoute(builder: (_)=>HomeScreen(),));
+                                          Navigator.push(context, MaterialPageRoute(builder: (_)=>MsignUp(),));
                                         },
                                         child: Text('Create Now',textAlign: TextAlign.center, style: TextStyle(
                                             color: lightBlue,

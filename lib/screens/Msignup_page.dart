@@ -42,7 +42,12 @@ class _MsignupPageState extends State<MsignupPage> {
                     children: [
                       Align(
                         alignment: Alignment.topLeft,
-                        child:Icon(Icons.arrow_back_ios_rounded),
+                        child:IconButton(
+                          onPressed: (){
+                            Navigator.pop(context);
+                          },
+                          icon: Icon(Icons.arrow_back_ios,color:Colors.black),
+                        ),
                       ),
                       SizedBox(height: 30.0,),
                       Container(

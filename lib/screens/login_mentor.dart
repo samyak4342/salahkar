@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:salahkar/screens/Mlogin_page.dart';
+import 'package:salahkar/screens/signup_mentor.dart';
 
 import '../constants/Text_styles.dart';
 import '../constants/constant_color.dart';
@@ -26,14 +27,19 @@ class _MloginState extends State<Mlogin> {
                         children: [
                           Align(
                             alignment: Alignment.topLeft,
-                            child:BackButton(),
+                            child:IconButton(
+                              onPressed: (){
+                                Navigator.pop(context);
+                              },
+                              icon: Icon(Icons.arrow_back_ios,color:Colors.black),
+                            ),
                           ),
                           Container(
                               width: 400,
                               height:MediaQuery.of(context).size.height * 0.4,
                               decoration: BoxDecoration(
                                 image : DecorationImage(
-                                    image: AssetImage('assets/login.jpg'),
+                                    image: AssetImage('assets/login.png'),
                                     fit: BoxFit.fill
                                 ),
                               )
@@ -136,7 +142,7 @@ class _MloginState extends State<Mlogin> {
                                   ),),
                                   TextButton(
                                       onPressed: (){
-                                        Navigator.push(context, MaterialPageRoute(builder: (_)=>Mlogin(),));
+                                        Navigator.push(context, MaterialPageRoute(builder: (_)=>MsignUp(),));
                                       },
                                       child: Text('Create Now',textAlign: TextAlign.center, style: TextStyle(
                                           color: lightBlue,
@@ -170,7 +176,7 @@ class _MloginState extends State<Mlogin> {
                           height:400,
                           decoration: BoxDecoration(
                             image : DecorationImage(
-                                image: AssetImage('assets/login.jpg'),
+                                image: AssetImage(''),
                                 fit: BoxFit.fill
                             ),
                           )
